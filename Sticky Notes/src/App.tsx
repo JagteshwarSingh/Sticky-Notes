@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Navbar from './Navbar.tsx'
-import Note from "./Objects.ts"
+import type { Note }  from "./Objects.ts"
 import NotesCard from "./NotesCard.tsx"
 
 function App() {
