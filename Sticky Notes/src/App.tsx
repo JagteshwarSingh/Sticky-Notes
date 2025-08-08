@@ -20,13 +20,21 @@ function App() {
     }
   ]
 
+  const addNewNote = () => {
+        notes.push({
+            id: 4,
+            content: "This is a new note."
+        });
+    };
+
   return (
     <>
     <Navbar />
     <main className="py-10">
       
       <h1>Sticky Notes</h1>
-      <div className="flex mb-4">
+      <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={addNewNote}>Add Note</button>
+      <div className="flex mb-4 ">
         
       {notes.map((note) => (
         <NotesCard key={note.id} note={note} />
