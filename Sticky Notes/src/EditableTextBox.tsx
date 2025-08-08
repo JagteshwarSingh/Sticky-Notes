@@ -1,9 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 export default function EditableTextBox({text}: {text: string}) {
     const [textValue, setTextValue] = useState(text);
     const [isEditing, setIsEditing] = useState(false);
-    const inputRef = useRef(null);
+    const inputRef = useRef<HTMLInputElement>(null);
 
     useEffect(() => {
         if (isEditing && inputRef.current){

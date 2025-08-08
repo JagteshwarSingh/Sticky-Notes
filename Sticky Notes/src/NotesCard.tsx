@@ -1,4 +1,3 @@
-import React from "react";
 import type { Note } from "./Objects.ts";
 import EditableTextBox from "./EditableTextBox.tsx";
 

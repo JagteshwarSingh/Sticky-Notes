@@ -6,8 +6,8 @@ Primary Features:
 
 ## To-Do
 -   adding notes
-    -   adding an empty note => editing note
+    -   adding an empty note => editing note // done
 -   localstorage
 -   login
 -   cloud-sync
--   
+-   polish ( i mean css)

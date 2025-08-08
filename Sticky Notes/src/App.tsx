@@ -1,11 +1,12 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Navbar from './Navbar.tsx'
 import Note from "./Objects.ts"
 import NotesCard from "./NotesCard.tsx"
 
 function App() {
 
-  const notes: Note[] = [
+  
+  const initialNotes: Note[] = [
     {
       id: 1,
       content: "This is a sample note.\n It can have multiple lines.",
@@ -20,12 +21,22 @@ function App() {
     }
   ]
 
+  const [notes, setNotes] = useState<Note[]>(initialNotes);
+
   const addNewNote = () => {
-        notes.push({
-            id: 4,
-            content: "This is a new note."
-        });
+        setNotes((prevNotes) => [
+            ...prevNotes,
+            {
+                id: 0,
+                content: "This is a new note."
+            }
+        ]);
     };
+
+    useEffect(() => {
+        // This effect could be used to fetch notes from an API or local storage
+        console.log("Notes loaded:", notes);
+    }, [notes]);
 
   return (
     <>
