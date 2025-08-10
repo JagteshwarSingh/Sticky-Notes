@@ -4,12 +4,6 @@ import { useAuth } from "react-oidc-context";
 function Navbar() {
     const auth = useAuth();
 
-    const signOutRedirect = () => {
-    const clientId = "160kp83i2u3slcipf2hfkghneb";
-    const logoutUri = "<logout uri>";
-    const cognitoDomain = "https://us-east-1hbddo4b3r.auth.us-east-1.amazoncognito.com";
-    window.location.href = `${cognitoDomain}/logout?client_id=${clientId}&logout_uri=${encodeURIComponent(logoutUri)}`;
-  };
   
     return <div className="font-bold bg-blue-500 text-white p-4 flex">
         <h1 className="text-2xl mr-auto">
