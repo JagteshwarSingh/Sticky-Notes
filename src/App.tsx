@@ -4,6 +4,7 @@ import type { Note }  from "./Objects.ts"
 import NotesCard from "./NotesCard.tsx"
 
 function App() {
+  
 
   
   const initialNotes: Note[] = [
